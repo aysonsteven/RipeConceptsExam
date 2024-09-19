@@ -7,23 +7,13 @@ public class OddOccurrencesInArray {
 	
 	public static int solution( int[] A) {
 		int notPaired = 0;
-		Map<Integer, Integer> mapOccurrences = new HashMap<>();
+//		Map<Integer, Integer> mapOccurrences = new HashMap<>();
+		//iteration of int[] A
+        for (int num : A) {
+        	// XOR each int property inside array
+            notPaired ^= num;  
+        }
 		
-		
-		//iteratation of array int.
-		for(int num: A) {
-			if(mapOccurrences.get(num) ==null) {
-				mapOccurrences.put(num, 1);
-			} else mapOccurrences.put(num, mapOccurrences.get(num) + 1);
-		}
-		
-		
-		/// iteration for map occurance
-		for (Map.Entry<Integer, Integer> entry : mapOccurrences.entrySet()) {
-			if(entry.getValue() == 1) {
-				notPaired = entry.getKey();
-			}
-		}
 		///return value
 		return notPaired;
 	}

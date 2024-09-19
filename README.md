@@ -9,7 +9,7 @@
 		Map<Integer, Integer> mapOccurrences = new HashMap<>();
 ```
 
-
+### update 09/19/2024 removed this part
 ## iteration of array int (int[] A)
 * using for-each loop to iterate within the array int (int[] A).
 * inside the loop block, there is a condition to check if the element is not yet existing in the map as key. the element will be added as key and the value of 1 is explicitly added since it's the first occurance of this element.
@@ -22,6 +22,7 @@
 		}
 ```
 
+### update 09/19/2024 removed this part
 ## iteration of map
 * for-each to iterate the mapOccurances entrysets.
 * inside the loop block there is a checking if an entry value is equal to 1. meaning it's occurance is only 1. Then the key will be passed as value of notPaired property.
@@ -31,4 +32,14 @@
 				notPaired = entry.getKey();
 			}
 		}
+```
+
+### update 09/19/2024 change implementation to this(XOR).
+## iteration of int[]A and XOR each property of int.
+* for-each to iterate the int[] A
+* XOR each int property.
+```
+        for (int num : A) {
+            notPaired ^= num;  
+        }
 ```
